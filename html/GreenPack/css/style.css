@@ -158,6 +158,7 @@ ul.menu_down > li:first-child a{padding: 0 51px 0 0;}
 #nav{
 	height:88px;
 	width:100%;
+	font-size:0;
 }
 #nav a{
 	display: block;
@@ -188,7 +189,7 @@ ul.menu_down > li:first-child a{padding: 0 51px 0 0;}
 .other, .utensils, .packing, .film{
 	height:88px;
 	display:inline-block;
-	width:25.05%;
+	width:25%;
 	position: relative;
 }
 .packing, .film, .other{margin-left:-5px;}

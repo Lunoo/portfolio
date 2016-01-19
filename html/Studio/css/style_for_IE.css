@@ -1,0 +1,12 @@
+
+.main-footer hr{
+	height:2px;
+	clear:both;
+}
+
+
+.footer ul.last-child{
+	margin-right:0;
+}
+.footer ul.last-child li{color:#b29940;}
+.footer ul.last-child li.head{margin-bottom:75px;}

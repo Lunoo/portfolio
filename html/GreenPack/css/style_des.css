@@ -1,0 +1,60 @@
+@import url('reset.css');
+
+body{
+    background:#fff;
+
+    min-width:930px;
+    font-family: "Open Sans";
+}
+
+.main .post{
+    padding: 25px 0px 35px 0px;
+    margin-top:10px;
+}
+.post h2{
+    margin-top: 2px;
+    padding-left: 30px;
+}
+.post p{
+    font-size: 13px;
+    margin:20px 50px 15px 32px;
+    color: #808080;
+    line-height: 15px;
+}
+.post p span{font-weight: bold;}
+.post p span.gr{color: #8cc63f;}
+.mask{
+    margin-top: -7px;
+    margin-bottom: 37px;
+    padding-left: 17px;
+}
+.mask p{
+    font-weight: 900;
+    font-size: 8px;
+    text-transform: uppercase;
+    margin-left:39px;
+    margin-top: 0;
+}
+.yellow, .orange, .blue, .green, .viollet{
+    display: inline-block;
+    width: 167px;
+    height: 125px;
+}
+.bg{
+    height: 125px;
+    width: 112px;
+    margin: 30px 0 0px 20px;
+}
+.mask .yellow .bg{
+    background:url(../images/des/img1.jpg) no-repeat 0px -35px;
+    margin-bottom:10px;
+}
+.mask .orange .bg{
+    background:url(../images/des/img2.jpg) no-repeat -10px 6px;}
+.mask .blue .bg{
+    background:url(../images/des/img3.jpg) no-repeat -18px 2px;}
+.mask .green .bg{
+    background:url(../images/des/img4.jpg) no-repeat 0px 0px;}
+.mask .viollet .bg{
+    background:url(../images/des/img5.jpg) no-repeat -13px 3px;}
+

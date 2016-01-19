@@ -1,0 +1,15 @@
+.head{
+    background: url(../images/message.shadow.png) no-repeat 2% 82%;
+}
+
+.message:after{
+    display: none;
+}
+
+.main .post{
+        background:#fefefe url(../images/image.shadow.png) no-repeat 35px 122px;
+}
+
+.img .imgshadow{
+    display: none;
+}

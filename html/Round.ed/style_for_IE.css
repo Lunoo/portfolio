@@ -1,0 +1,52 @@
+.header p{
+		color:#c9caca;
+		background:none;
+		text-shadow:#000 1px 1px 1px;
+		}		
+.wrapper2{
+	height:580px;
+	}	
+.header li.active{
+	-ms-border-radius: 4px;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}	
+.header a.active, .header li a:hover{
+	-ms-border-radius: 4px;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+
+.cn_wrapper{
+	-ms-border-radius: 7px;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+.cn_page{
+	-ms-border-radius: 6px 0 0 6px;;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+.cn_page .head{
+	-ms-border-radius:5px 0 0 0;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+.head .cn_nav{
+	-ms-border-radius:3px;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+.cn_nav .cn_prev img{
+	-ms-border-radius:3px 0 0 3px;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+.cn_nav .cn_next img{
+	border-radius:0 3px 3px 0;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+.main-rot{
+	-ms-border-radius:0 0 0 5px;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+.button{
+	-ms-border-radius:4px;
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}
+hr.line2{
+	behavior: url(http://mysite.local/pie/PIE.htc);
+}

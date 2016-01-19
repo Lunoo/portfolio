@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadProBold.eot');
+  src: local('☺'), url('../fonts/MyriadProSemiBoldItalic.woff') format('woff'), url('../fonts/MyriadProSemiBoldItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadProBold.eot');
+  src: local('☺'), url('../fonts/MyriadProBold.woff') format('woff'), url('../fonts/MyriadProBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadProRegular.eot');
+  src: local('☺'), url('../fonts/MyriadProRegular.woff') format('woff'), url('../fonts/MyriadProRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadProItalic.eot');
+  src: local('☺'), url('../fonts/MyriadProItalic.woff') format('woff'), url('../fonts/MyriadProItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadProBoldItalic.eot');
+  src: local('☺'), url('../fonts/MyriadProBoldItalic.woff') format('woff'), url('../fonts/MyriadProBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}

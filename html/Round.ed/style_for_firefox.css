@@ -1,0 +1,11 @@
+@-moz-document url-prefix() 
+{ 
+	.header p{
+		color:#c9caca;
+		background:none;
+		text-shadow:#000 1px 1px 1px;
+		}		
+	.wrapper2{
+	height:580px;
+	}	
+} 

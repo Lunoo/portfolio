@@ -1,0 +1,7 @@
+@-moz-document url-prefix() 
+{ 
+	.main-footer hr{
+	height:2px;
+	clear:both;
+}	
+} 

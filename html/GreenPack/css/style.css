@@ -192,8 +192,6 @@ ul.menu_down > li:first-child a{padding: 0 51px 0 0;}
 	width:25%;
 	position: relative;
 }
-.packing, .film, .other{margin-left:-5px;}
-
 .utensils{background:#72b943 url(../images/green.png) repeat-y; z-index: 4;}
 .packing{background:#f49220 url(../images/orange.png) repeat-y; z-index: 3;}
 .film{background:#00a79b url(../images/blue.png) repeat-y; z-index: 2;}

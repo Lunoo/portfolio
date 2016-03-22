@@ -315,7 +315,7 @@ a.button:hover {
 
 /* line 197, ../sass/style.sass */
 body {
-  height: 2000px;
+  min-width: 480px;
   font-family: "EncoreSansPro", arial, sans-serif;
   color: #fff;
   font-weight: 100;

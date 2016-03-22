@@ -1,0 +1,350 @@
+body
+    @media (max-width: 960px)
+        font-size: 14px
+
+    @media (max-width: 768)
+        font-size: 12px
+
+@media (max-width: 960px)
+    .wrapper
+        max-width: 740px
+    .header
+        font-size: 26px
+    .details
+        font-size: 14px
+        letter-spacing: 0
+    section.section-1
+        h1
+            font-size: 44px
+            &:before, &:after
+                width: 50px
+            &:before
+                left: -5px
+            &:after
+                right: -5px
+        .subheader
+            font-size: 20px
+        &:after
+            right: 145px
+    .section-2
+        h3
+            font-size: 18px
+            &:after
+                width: 40px
+                left: 73px
+    .section-3
+        h1
+            font-size: 44px
+    .section-4
+        div[class="step-1"]
+            left: -5px
+        div[class="step-2"]
+            left: 257px
+        div[class="step-3"]
+            left: 342px
+        div[class="step-4"]
+            left: 520px
+        div[class="step-5"]
+            left: 38px
+    .section-5, .section-6, .section-7
+        .head
+            font-size: 24px
+        .details
+            font-size: 13px
+            line-height: 20px
+    .section-8
+        nav
+            ul
+                padding: 10px 0
+            a
+                font-size: 18px
+        [class*="column"]
+            margin-right: 10px
+        .column-2
+            width: 362px
+        .column-1
+            width: 176px
+    .section-10
+        .wrapper
+            max-width: 600px
+            height: 220px
+        .slider
+            [class*="photo"]
+                float: right
+                margin-top: -70px
+            .personal-info
+                float: left
+                width: 50%
+                padding-left: 0
+                text-align: center
+            .details
+                margin-top: 30px
+                clear: left
+                width: 50%
+
+@media (max-width: 768px)
+    .wrapper
+        max-width: 480px
+    .header
+        font-size: 24px
+    .subheader
+        font-size: 17px
+        width: auto
+        max-width: 500px
+    a.button
+        width: 160px
+        height: 40px
+        line-height: 40px
+        font-size: 22px
+    .more
+        width: 150px
+        height: 40px
+        line-height: 40px
+        font-size: 18px
+    div.section-1
+        height: 700px
+        .logo
+            display: block
+            text-align: center
+        nav
+            float: none
+            margin-top: 60px
+            li
+                margin-left: 40px
+    section.section-1
+        margin-top: 150px
+        h1
+            font-size: 36px
+            &:before
+                left: 0px
+            &:after
+                right: 0px
+        .button:before
+            display: none
+        &:after
+            display: none
+    .section-2
+        padding-bottom: 70px
+        .wrapper div
+            display: block
+            max-width: 300px
+            width: auto
+            margin: 20px auto
+        h3:after
+            width: 70px
+            left: 115px
+    .section-3
+        h1
+            font-size: 36px
+    .section-4
+        height: 650px
+        .subheader
+            width: auto
+            max-width: 500px
+
+        div[class*="step"]
+            width: 113px
+            height: 63px
+            &:before
+                +triangle($point:top, $height:37px, $width:59px, $color:#fc635d)
+                top: -37px
+            &:after
+                +triangle($point:bottom, $height:37px, $width:59px, $color:#aeaeae)
+                bottom: -37px
+        div[class="step-1"]
+            border-left: 1px solid #aeaeae
+            border-right: 3px solid #fc635d
+            top: 138px
+            left: -4px
+            &:after, &:before
+                left: -2px
+        div[class="step-2"]
+            border-right: 1px solid #aeaeae
+            border-left: 3px solid #fc635d
+            top: 176px
+            left: 171px
+            &:after, &:before
+                left: -3px
+            .header:before
+                border-left: 57px solid transparent
+                border-right: 57px solid transparent
+                border-bottom: 36px solid #fff
+                left: -1px
+                top: -36px
+            .header:after
+                left: -1px
+            span:before, span:after
+                height: 3px
+                width: 69px
+            span:before
+                top: -20px
+                left: -7px
+            span:after
+                width: 74px
+                top: 42px
+                left: -69px
+        div[class="step-3"]
+            border-left: 3px solid #fc635d
+            border-right: 3px solid #fc635d
+            top: 76px
+            left: 228px
+            &:before, &:after
+                border-left: 60px solid transparent
+                border-right: 60px solid transparent
+                left: -3px
+            .header:before
+                border-left: 56px solid transparent
+                border-right: 56px solid transparent
+                border-bottom: 34px solid #fff
+                left: 1px
+                top: -34px
+            .header:after
+                left: 0px
+        div[class="step-4"]
+            height: 100px
+            width: 172px
+            border-left: 1px solid #aeaeae
+            border-right: 3px solid #fc635d
+            top: 139px
+            left: 346px
+            &:before
+                +triangle($point:top, $height:52px, $width:88px, $color:#fc635d)
+                top: -52px
+                left: -1px
+            &:after
+                +triangle($point:bottom, $height:52px, $width:88px, $color:#aeaeae)
+                bottom: -51px
+                left: -1px
+            .header:before
+                border-left: 84px solid transparent
+                border-right: 84px solid transparent
+                border-bottom: 48px solid #fff
+                top: -48px
+                left: 3px
+            .header:after
+                border-left: 86px solid transparent
+                border-right: 86px solid transparent
+                border-top: 50px solid #fff
+                bottom: -49px
+                left: 1px
+            span:before
+                height: 3px
+                width: 83px
+                background: #fc635d
+                transform: rotate(-31deg)
+                bottom: -22px
+                right: -8px
+            .details
+                width: 125px
+        div[class="step-5"]
+            width: 173px
+            height: 190px
+            top: 202px
+            left: 25px
+            &:before
+                border-right: 86px solid $grey-color
+                border-left: 86px solid $grey-color
+                border-bottom: 55px solid transparent
+                left: 0
+                top: -1px
+            &:after
+                border-right: 86px solid $grey-color
+                border-left: 86px solid $grey-color
+                border-top: 55px solid transparent
+                left: 0
+                bottom: -1px
+            .border:before, .border:after
+                border-right: 88px solid #fff
+                border-left: 88px solid #fff
+                left: -2px
+            .border:before
+                border-bottom: 56px solid transparent
+                top: -2px
+            .border:after
+                border-top: 56px solid transparent
+                bottom: -2px
+        h3.header
+            font-size: 19px
+            padding-bottom: 1px
+            &:before
+                +triangle($point:top, $height:33px, $width:55px, $color:#fff)
+                top: -33px
+                left: 2px
+            &:after
+                +triangle($point:bottom, $height:36px, $width:57px, $color:#fff)
+                bottom: -36px
+                left: 0
+        .details
+            width: 90px
+            font-size: 11px
+            line-height: 15px
+        .icn-step-5
+            top: 127px
+            left: 62px
+        .arrow
+            bottom: 18px
+    .section-5, .section-6, .section-7
+        .head
+            margin-top: -30px
+            font-size: 18px
+            border-left: 6px solid #fc635e
+        .details
+            font-size: 12px
+            line-height: 16px
+    .section-5
+        padding-bottom: 70px
+        .header
+            margin-top: 40px
+    .section-6
+        padding-bottom: 80px
+        .head
+            border-right: 6px solid #fc635e
+            border-left: 0
+    .section-7
+        padding-bottom: 100px
+    .section-8
+        height: 640px
+        nav a
+            font-size: 15px
+        .row
+            height: 105px
+            margin-top: 5px
+        [class*="column"]
+            margin-right: 5px
+        .column-1
+            width: 110px
+        .column-2
+            width: 225px
+        .hover
+            .title
+                margin: 15px 0 0 0
+                font-size: 20px
+            span
+                font-size: 70px
+                top: 20px
+    .section-9
+        padding-bottom: 70px
+        .wrapper
+            margin-top: 40px
+        div[class*="photo"]
+            height: 145px
+            width: 128px
+            &:before, &:after
+                border-right: 64px solid #f2f2f2
+                border-left: 64px solid #f2f2f2
+            &:before
+                border-bottom: 34px solid transparent
+            &:after
+                border-top: 34px solid transparent
+        h3.header
+            margin-top: 20px
+            font-size: 18px
+        .profession
+            font-size: 15px
+        .social
+            display: none
+    .section-10
+        .rectangle
+            margin-top: 35px
+        .wrapper
+            margin-top: 10px

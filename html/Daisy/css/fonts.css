@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'GothamPro';
+  src: local('☺'), url('../fonts/GothaProBold.otf') format('openType');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EncoreSansPro';
+  src: local('☺'), url('../fonts/PFEncoreSansPro-Bold.otf') format('openType');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EncoreSansPro';
+  src: local('☺'), url('../fonts/PFEncoreSansPro-Thin.otf') format('openType');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EncoreSansPro';
+  src: local('☺'), url('../fonts/PFEncoreSansPro-Light.otf') format('openType');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EncoreSansPro';
+  src: local('☺'), url('../fonts/PFEncoreSansPro-Medium.otf') format('openType');
+  font-weight: 400;
+  font-style: normal;
+}

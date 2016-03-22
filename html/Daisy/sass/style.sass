@@ -1,0 +1,874 @@
+@import "compass"
+@import "reset"
+
+$primary-color: #fff
+$important-color: #fc645f
+$red-color: #fc635e
+$grey-color: #868686
+
+$icons: sprite-map("icons/*.png", $layout: vertical, $spacing: 15px)
+$icon-names: 1 2 3 4 icon hover-1 hover-3 hover-2 hover-4
+$icon-names-2: step-1 step-2 step-3 step-4 step-5
+$social: twitter fb in
+$arrow: arrow-left arrow-right
+
+@each $i in $icon-names
+    .rectangle .icn-#{$i}
+        background-position: sprite-position($icons, $i)
+        +sprite-dimensions($icons, $i)
+@each $i in $icon-names-2
+    .icn-#{$i}
+        background: $red-color $icons sprite-position($icons, $i, (38px - image-width("icons/"+$i+".png"))/2, (38px - image-height("icons/"+$i+".png"))/2)
+.icn-step-5
+    background: #fff $icons sprite-position($icons, step-5, (38px - image-width("icons/step-5.png"))/2, (38px - image-height("icons/step-5.png"))/2)
+@each $i in $social
+    .social-#{$i}
+        background: $icons sprite-position($icons, $i, (36px - image-width("icons/"+$i+".png"))/2, (36px - image-height("icons/"+$i+".png"))/2)
+@each $i in $arrow
+    .section-10 .navigation .icn-#{$i}
+        background-position: sprite-position($icons, $i)
+        +sprite-dimensions($icons, $i)
+
+// Utility
+
+=triangle($point, $height, $width, $color)
+    $opposite: opposite-position($point)
+    border: $width solid transparent
+    border-#{$opposite}: $height solid $color
+    border-#{$point}: 0
+    position: absolute
+    content: ''
+
+=logo($heightAll, $heightContainer, $width, $fsize, $bgColor, $textColor)
+    display: inline-block
+    height: $heightAll
+    width: $width
+    color: $textColor
+    line-height: $heightAll
+    text-align: center
+    font-size: $fsize
+    font-weight: 400
+    position: relative
+    &:before, &:after
+        position: absolute
+        content: ''
+        top: 0
+        border-bottom: ($heightAll - $heightContainer)/2 solid transparent
+        border-top: ($heightAll - $heightContainer)/2 solid transparent
+        height: $heightContainer
+        z-index: -1
+    &:before
+        border-right: $width/2 solid $bgColor
+        left: 0
+    &:after
+        border-left: $width/2 solid $bgColor
+        right: 0
+=rectangle($heightAll:116px, $heightContainer:58px, $width:100px, $border:5px, $borderColor:red, $bgColor:white)
+    display: block
+    height: $heightAll
+    width: $width
+    position: relative
+    &:before, &:after
+        position: absolute
+        content: ''
+        top: 0
+        border-bottom: ($heightAll - $heightContainer)/2 solid transparent
+        border-top: ($heightAll - $heightContainer)/2 solid transparent
+        height: $heightContainer
+        z-index: -2
+    &:before
+        border-right: $width/2 solid $borderColor
+        left: 0
+    &:after
+        border-left: $width/2 solid $borderColor
+        right: 0
+    span:before, span:after
+        position: absolute
+        content: ''
+        top: $border
+        border-bottom: ($heightAll - $heightContainer - $border)/2 solid transparent
+        border-top: ($heightAll - $heightContainer - $border)/2 solid transparent
+        height: $heightContainer - $border
+        z-index: -1
+    span:before
+        left: $border
+        border-right: $width/2 - $border solid $bgColor
+    span:after
+        right: $border
+        border-left: $width/2 - $border solid $bgColor
+
+.wrapper
+    margin: 0 auto
+    max-width: 930px
+    z-index: 1
+    position: relative
+section
+    overflow: hidden
+    position: relative
+    text-align: center
+img
+    display: block
+    height: auto
+    max-width: 100%
+
+a, a:hover, a:active, a:focus, a:visited
+    text-decoration: none
+    color: $primary-color
+
+a.button
+    display: inline-block
+    height: 50px
+    width: 200px
+    font-size: 24px
+    line-height: 50px
+    border: 2px solid $important-color
+    border-radius: 6px
+    transition: all 1s ease
+    &:hover
+        border: 2px solid #f5f5f5
+        transition: all 1s ease
+.arrow
+    display: inline-block
+    height: 28px
+    width: 28px
+    border-radius: 50%
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    text-align: center
+    bottom: 32px
+    line-height: 28px
+    font-size: 24px
+    cursor: pointer
+    transition: all .5s ease
+.arrow-red
+    background: $important-color
+    &:hover
+        background: darken($important-color, 5%)
+        transition: all .5s ease
+.arrow-white
+    color: $important-color
+    border: 1px solid $important-color
+    &:hover
+        color: darken($important-color, 15%)
+        border-color: darken($important-color, 15%)
+        transition: all .5s ease
+.header
+    margin: 60px auto 0
+    padding-bottom: 7px
+    display: inline-block
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 28px
+    color: $grey-color
+    border-bottom: 1px solid $grey-color
+    span
+        color: $important-color
+.subheader
+    color: #adadad
+    font-size: 20px
+    width: 510px
+    margin: 17px auto 0
+    line-height: 25px
+.details
+    margin-top: 28px
+    line-height: 19px
+    letter-spacing: .5px
+    color: #adadad
+    font-size: 15px
+.more
+    display: block
+    margin-top: 35px
+    width: 170px
+    height: 45px
+    line-height: 45px
+    text-align: center
+    background: $red-color
+    font-size: 20px
+    color: #f2f2f2
+    font-weight: 100
+    border-radius: 6px
+    transition: all .5s ease
+    &:hover
+        background: darken($red-color, 5%)
+        transition: all .5s ease
+//General
+body
+    height: 2000px
+    font-family: "EncoreSansPro", arial, sans-serif
+    color: $primary-color
+    font-weight: 100
+
+div.section-1, .section-3, footer
+    height: 768px
+    &:before
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        width: 100%
+        height: 100%
+        background: rgba(17,17,17,.7)
+        z-index: 0
+
+div.section-1
+    background: url('../img/bg.jpg') no-repeat center center fixed
+    background-size: cover
+    position: relative
+    header
+        padding-top: 50px
+
+    .logo
+        font-size: 24px
+        display: inline-block
+        height: 33px
+        line-height: 33px
+        font-weight: 800
+        margin: -35px 0 0 13px
+        span
+            +logo($heightAll:68px, $heightContainer:35px, $width:60px, $fsize:35px, $bgColor:$important-color, $textColor:#0c252d)
+            top: 3px
+            left: -15px
+    nav
+        float: right
+        li
+            display: inline-block
+            margin-left: 50px
+            position: relative
+        a
+            font-size: 16px
+            text-transform: uppercase
+            transition: color .5s ease .2s
+            &:hover
+                color: $important-color
+                transition: color .5s ease
+            &:after
+                display: block
+                background: $important-color
+                height: 4px
+                content: ''
+                width: 0
+                position: absolute
+                bottom: -7px
+                left: 50%
+                transition: all .5s ease
+            &:hover:after
+                width: 100%
+                left: 0%
+                transition: all .5s ease .2s
+
+section.section-1
+    margin-top: 210px
+    text-align: center
+    overflow: inherit
+    h1
+        font-size: 51px
+        font-weight: 800
+        text-transform: uppercase
+        position: relative
+        span
+            color: $important-color
+        &:before, &:after
+            content: ''
+            width: 108px
+            height: 8px
+            position: absolute
+            background: #7d7c79
+            top: 22px
+        &:before
+            left: -5px
+        &:after
+            right: -5px
+    .subheader
+        margin-top: 15px
+        font-size: 24px
+        color: #fff
+        width: auto
+        max-width: 700px
+    .button
+        margin-top: 45px
+        position: relative
+        color: $important-color
+        &:hover
+            color: #f5f5f5
+        &:before
+            display: block
+            content: ''
+            position: absolute
+            right: -55px
+            bottom: 8px
+            height: 32px
+            width: 47px
+            border-radius: 10px
+            background: url('../img/mouse.png') no-repeat
+    &:after
+        display: block
+        content: ''
+        position: absolute
+        right: 245px
+        bottom: -300px
+        height: 325px
+        width: 70px
+        border-top: 1px dashed #5d5d5d
+        border-right: 1px dashed #5d5d5d
+        border-top-right-radius: 25px
+
+.section-2
+    background: $primary-color
+    text-align: center
+    padding-bottom: 90px
+
+    .wrapper
+        font-size: 0
+        margin-top: 80px
+    .wrapper div
+        display: inline-block
+        text-align: center
+        width: 25%
+    h3
+        color: $grey-color
+        font-size: 20px
+        font-weight: 400
+        margin-top: 17px
+        position: relative
+        text-transform: uppercase
+        &:after
+            content: ''
+            position: absolute
+            bottom: -10px
+            left: 90px
+            width: 57px
+            height: 1px
+            background: $grey-color
+    .arrow
+        bottom: 13px
+.rectangle
+    +rectangle($heightAll:116px, $heightContainer:58px, $width:100px, $border:5px, $borderColor:#fe8682, $bgColor:$red-color)
+    margin: 0 auto
+    span
+        display: inline-block
+        margin: 37px auto 0
+        background: $icons
+    span:before, span:after, &:hover span:after, &:hover span:before
+        transition: all .3s ease
+    &:before:hover
+        border-right-color: #fc635e
+    &:after:hover
+        border-left-color: #fc635e
+    &:hover span:before
+        border-right-color: #fff
+    &:hover span:after
+        border-left-color: #fff
+
+.section-3
+    height: 485px
+    background: url('../img/bg-2.jpg') no-repeat center center fixed
+    background-size: cover
+    padding-top: 90px
+    text-align: left
+    .wrapper
+        text-align: center
+        height: 370px
+        border: 10px solid rgba(255, 255, 255, .1)
+    .button
+        color: $important-color
+        &:hover
+            color: #f5f5f5
+    h1
+        font-size: 51px
+        font-weight: 800
+        text-transform: uppercase
+        margin: 115px auto 50px
+        span
+            color: $important-color
+
+.section-4
+    text-align: center
+    height: 840px
+    .header
+        margin-top: 50px
+    .subheader
+        width: 505px
+    div[class*="step"]
+        width: 170px
+        height: 95px
+        position: absolute
+        &:before
+            +triangle($point:top, $height:56px, $width:88px, $color:#fc635d)
+            top: -56px
+        &:after
+            +triangle($point:bottom, $height:56px, $width:88px, $color:#aeaeae)
+            bottom: -56px
+    div[class="step-1"]
+        border-left: 1px solid #aeaeae
+        border-right: 5px solid #fc635d
+        top: 207px
+        left: 70px
+        z-index: 1
+        &:after, &:before
+            left: -1px
+    div[class="step-2"]
+        border-right: 1px solid #aeaeae
+        border-left: 5px solid #fc635d
+        top: 264px
+        left: 332px
+        &:after, &:before
+            border-bottom-color: #aeaeae
+            left: -5px
+        .header:before
+            border-left: 86px solid transparent
+            border-right: 86px solid transparent
+            border-bottom: 54px solid #fff
+            left: -3px
+            top: -54px
+        .header:after
+            left: -3px
+        span:before, span:after
+            position: absolute
+            content: ''
+            height: 5px
+            width: 104px
+            background: #fc635d
+        span:before
+            transform: rotate(-33deg)
+            top: -30px
+            left: -12px
+            z-index: 1
+        span:after
+            width: 112px
+            transform: rotate(33deg)
+            top: 65px
+            left: -104px
+            z-index: 2
+    div[class="step-3"]
+        border-left: 5px solid #fc635d
+        border-right: 5px solid #fc635d
+        top: 114px
+        left: 417px
+        &:before, &:after
+            border-left: 90px solid transparent
+            border-right: 90px solid transparent
+            left: -5px
+        .header:before
+            border-left: 85px solid transparent
+            border-right: 85px solid transparent
+            border-bottom: 51px solid #fff
+            left: 0
+            top: -51px
+        .header:after
+            left: -1px
+    div[class="step-4"]
+        height: 150px
+        width: 258px
+        border-left: 1px solid #aeaeae
+        border-right: 5px solid #fc635d
+        top: 209px
+        left: 595px
+        &:before
+            +triangle($point:top, $height:78px, $width:132px, $color:#fc635d)
+            top: -78px
+            left: -1px
+        &:after
+            +triangle($point:bottom, $height:78px, $width:132px, $color:#aeaeae)
+            bottom: -77px
+            left: -1px
+        .header:before
+            border-left: 126px solid transparent
+            border-right: 126px solid transparent
+            border-bottom: 72px solid #fff
+            top: -72px
+            left: 5px
+        .header:after
+            border-left: 130px solid transparent
+            border-right: 130px solid transparent
+            border-top: 76px solid #fff
+            bottom: -75px
+            left: 1px
+        span:before
+            position: absolute
+            content: ''
+            height: 5px
+            width: 130px
+            background: #fc635d
+            transform: rotate(-31deg)
+            bottom: -35px
+            right: -13px
+            z-index: 2
+        .details
+            width: 190px
+    div[class="step-5"]
+        width: 260px
+        height: 285px
+        background: url('../img/image-1.jpg')
+        border-left: 1px solid $grey-color
+        border-right: 1px solid $grey-color
+        top: 311px
+        left: 113px
+        &:before
+            border-right: 130px solid $grey-color
+            border-left: 130px solid $grey-color
+            border-bottom: 83px solid transparent
+            left: 0
+            top: -8px
+        &:after
+            border-right: 130px solid $grey-color
+            border-left: 130px solid $grey-color
+            border-top: 83px solid transparent
+            left: 0
+            bottom: -8px
+        .border:before, .border:after
+            content: ''
+            position: absolute
+            border-right: 133px solid #fff
+            border-left: 133px solid #fff
+            left: -3px
+        .border:before
+            border-bottom: 84px solid transparent
+            top: -9px
+        .border:after
+            border-top: 84px solid transparent
+            bottom: -9px
+            z-index: 1
+    h3.header
+        font-size: 24px
+        margin-top: 0
+        &:before
+            +triangle($point:top, $height:50px, $width:82px, $color:#fff)
+            top: -50px
+            left: 5px
+        &:after
+            +triangle($point:bottom, $height:54px, $width:86px, $color:#fff)
+            bottom: -54px
+            left: 1px
+            z-index: 1
+    .details
+        margin: 10px auto 0
+        width: 130px
+        letter-spacing: 0
+    i
+        position: absolute
+        height: 38px
+        width: 38px
+        border-radius: 50%
+        top: -20px
+        left: -20px
+        z-index: 2
+        cursor: auto
+    .icn-step-5
+        top: 200px
+        left: 108px
+        border: 3px solid $red-color
+    .arrow
+        bottom: 18px
+.section-5, .section-6, .section-7
+    background: #f2f2f2
+    .wrapper
+        margin-top: 68px
+    img
+        float: right
+        width: 53%
+        margin-right: 11px
+    .info
+        text-align: left
+        float: left
+        width: 44%
+    .head
+        margin-top: 28px
+        border-left: 10px solid $red-color
+        padding: 6px 12px 6px
+        font-size: 28px
+        font-weight: 400
+        text-transform: uppercase
+        color: $grey-color
+    .details
+        margin-top: 15px
+        color: #9e9898
+        font-size: 15px
+        line-height: 23px
+        letter-spacing: .7px
+.section-5
+    background: #f2f2f2
+    padding-bottom: 95px
+    .header
+        margin-top: 60px
+    .arrow
+        bottom: 17px
+.section-6
+    background: #fff
+    padding-bottom: 150px
+    .wrapper
+        margin-top: 130px
+    img
+        float: left
+    .info
+        float: right
+    .info
+        text-align: right
+    .head
+        border-right: 12px solid $red-color
+        border-left: none
+    .more
+        float: right
+    .arrow
+        bottom: 13px
+.section-7
+    background: #f2f2f2
+    padding-bottom: 140px
+    .wrapper
+        margin-top: 115px
+    .arrow
+        bottom: 13px
+.section-8
+    height: 850px
+    .header
+        margin-top: 79px
+    nav
+        margin-top: 40px
+        border-top: 1px solid #adadad
+        border-bottom: 1px solid #adadad
+        ul
+            padding: 20px 0
+            display: table
+            width: 100%
+        li
+            display: table-cell
+            padding: 0 35px
+            text-align: center
+            position: relative
+            &:first-child
+                padding-left: 0
+            &:last-child
+                padding-right: 0
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                width: 1px
+                height: 20px
+                background: #adadad
+                transform: rotate(25deg)
+            &:last-of-type:after
+                display: none
+        a
+            font-size: 20px
+            color: #fa574d
+            text-transform: uppercase
+            transition: all .5s ease
+            &:hover
+                transition: all .5s ease
+                color: darken(#fa574d, 55%)
+
+    .examples
+        margin-top: 45px
+    .row
+        clear: both
+        height: 200px
+        margin-top: 10px
+        font-size: 0
+        >:last-child
+            margin-right: 0
+    [class*="column"]
+        height: 100%
+        display: inline-block
+        position: relative
+        margin-right: 15px
+    .column-1
+        width: 220px
+        background: #18f4f4
+    .column-2
+        background: $red-color
+        width: 455px
+    @for $i from 1 through 6
+        .portfolio-image-#{$i}
+            background: url('../img/portfolio-image-#{$i}.jpg') no-repeat center center
+            background-size: cover
+            &:hover .hover
+                display: block
+    .hover
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background: rgba($red-color, .78)
+        cursor: pointer
+        .title
+            margin: 25px 0 0 21px
+            font-size: 28px
+            font-weight: 900
+            text-transform: uppercase
+        span
+            position: absolute
+            left: 0
+            right: 0
+            top: 60px
+            font-size: 105px
+            font-weight: 900
+            text-align: center
+    .more
+        margin: 60px auto 0
+        width: 190px
+
+    .arrow
+        bottom: 17px
+.section-9
+    background: #f2f2f2
+    padding-bottom: 90px
+    .header
+        margin-top: 47px
+    .wrapper
+        margin-top: 70px
+        font-size: 0
+        &>div
+            width: 33.3%
+            display: inline-block
+            font-size: 15px
+            text-align: center
+
+    h3.header
+        text-transform: none
+        width: 100%
+        border-bottom: none
+        margin-top: 30px
+    .profession
+        display: block
+        margin-top: 2px
+        font-size: 20px
+        color: #565656
+    i
+        margin: 17px 7px 0
+        display: inline-block
+        height: 37px
+        width: 37px
+        border-radius: 50%
+        cursor: pointer
+    .arrow
+        bottom: 13px
+@for $i from 1 through 4
+    .photo-#{$i}
+        background: url('../img/photo-#{$i}.jpg') no-repeat center center
+    div[class*="photo"]
+        position: relative
+        margin: 0 auto
+        height: 170px
+        width: 148px
+        &:before, &:after
+            content: ''
+            position: absolute
+            width: 0
+            border-right: 74px solid #f2f2f2
+            border-left: 74px solid #f2f2f2
+            left: 0
+        &:before
+            border-bottom: 44px solid transparent
+            top: 0px
+        &:after
+            border-top: 44px solid transparent
+            bottom: 0
+.section-10
+    .rectangle
+        +rectangle($heightAll:86px, $heightContainer:44px, $width:74px, $border:5px, $borderColor:#fe8682, $bgColor:$red-color)
+        margin-top: 55px
+        span
+            margin: 27px auto 0
+    .wrapper
+        margin-top: 75px
+        height: 180px
+    .slider
+        .slide
+            overflow: hidden
+            >*
+                display: inline-block
+                margin: 0 11px 0 21px
+        .details
+            margin-top: 60px
+            float: left
+            width: 35.5%//330px
+            letter-spacing: -0.1px
+            text-align: justify
+        [class*="photo"]
+            float: left
+            height: 180px
+            width: 158px
+            //top: 70px
+            &:before, &:after
+                border-right: 79px solid #fff
+                border-left: 79px solid #fff
+        .personal-info
+            float: right
+            width: 33.3%//310px
+            text-align: left
+            padding-left: 30px
+            .header
+                margin-top: 50px
+                border-bottom: none
+                text-transform: none
+            .profession
+                margin-top: 15px
+                display: block
+                color: #868686
+                font-size: 15px
+
+    .navigation
+        margin: 33px auto 170px
+        clear: both
+        i
+            display: inline-block
+            margin: 17px 11px
+            background: $icons
+            border-radius: 50%
+            cursor: pointer
+            transition: all .5s ease
+            &:hover
+                transition: all .5s ease
+                box-shadow: 0 0 15px 0 $red-color
+    figure.adress
+        bottom: 240px
+        left: 0
+        right: 0
+        padding-top: 1px
+        z-index: 0
+        +rectangle($heightAll:240px, $heightContainer:120px, $width:210px, $border:10px, $borderColor:#fe8682, $bgColor:$red-color)
+        position: absolute
+        i
+            font-size: 27px
+            display: block
+            font-weight: 400
+            margin-top: 75px
+            width: auto
+            height: auto
+        span
+            margin: 0 auto
+            background: none
+            font-size: 15px
+            width: 175px
+            line-height: 22px
+    .map
+        height: 335px
+        width: 100%
+        background: url('../img/map.jpg') no-repeat left center
+        background-size: cover
+footer
+    height: 210px
+    text-align: center
+    position: relative
+    background: url('../img/bg-footer.jpg') no-repeat center center fixed
+    background-size: cover
+    .logo
+        margin-top: 75px
+        display: inline-block
+        font-size: 32px
+        height: 32px
+        font-weight: 800
+        position: relative
+        span
+            +logo($heightAll:90px, $heightContainer:46px, $width:80px, $fsize:40px, $bgColor:$important-color, $textColor:#0c252d)
+            top: 3px
+            left: -15px
+            z-index: 1
+
+@import "adaptivity"

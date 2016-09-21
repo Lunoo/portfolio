@@ -1,0 +1,13 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .contact form textarea{
+		height: 224px;
+	}
+	.projects .head.house h2{
+		margin-top: 150px;
+	}
+	@media screen and (max-width: 979px) and (min-width: 480px){
+		.projects .head.house h2{
+			margin-top: 0px;
+		}
+	}
+}

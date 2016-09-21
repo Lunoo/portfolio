@@ -1,0 +1,43 @@
+
+#colorSelector {
+	position: relative;
+	width: 54px;
+	height: 36px;
+	/*background: url(../img/colorpicker/select2.png);*/
+	border: 1px solid #e1e3e4;
+}
+#colorSelector:after{
+	position: absolute;
+	content: '';
+	top: 16px;
+	right: 5px;
+	height: 10px;
+	width: 10px;
+	background: url('../img/icons/arrow-down.png') no-repeat;
+}
+#colorSelector div {
+	position: absolute;
+	top: 5px;
+	left: 6px;
+	width: 24px;
+	height: 24px;
+	/*background: url(../img/colorpicker/select2.png) center;*/
+	border: 1px solid #e1e3e4;
+}
+.colorpicker_hue ~ * {
+    display: none;
+}
+.colorpicker_hue{
+	background: url(../img/colorpicker/colorline.png);
+	border: 1px solid #e1e3e4;
+}
+.colorpicker{
+	background: none;
+	width: 220px;
+	height: 172px;
+	background: #f4f3f3;
+	border: 1px solid #e1e3e4;
+}
+.colorpicker_color{
+	border: 1px solid #e1e3e4;
+}

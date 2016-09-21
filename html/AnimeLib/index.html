@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>AnimeLib</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 10]><link href="css/style_for_IE.css" rel="stylesheet"/><![endif]-->
+    <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+
+<!--             ====   Set templates  ====                   -->
+
+    <script type="text/template" data-name="posts">
+            {{for posts}}
+        <section class="post" data-position="{{:id}}">
+            <h3>{{:title}}</h3>
+            <div class="newsinfo">
+                <span class="date">{{:date}}</span>
+                <span class="author">Автор: {{:author}}</span>
+            </div>
+            <figure class="poster">
+                <img src="{{:poster_scr}}" alt="poster">
+            </figure>
+            <ul>
+                <li><strong>Год: </strong><span>{{:year}}</span></li>
+                <li><strong>Жанр: </strong><span>{{:genre}}</span></li>
+                <li><strong>Страна: </strong><span>{{:country}}</span></li>
+                <li><strong>Количество серий: </strong><span>{{:number}}</span></li>
+                <li><strong>Дата выпуска: </strong><span>{{:release}}</span></li>
+                <li><strong>Режжисер: </strong><span>{{:producer}}</span></li>
+                <li><strong>Автор оригинала / Сценарист: </strong><span>{{:original_author}}</span></li>
+                <li><strong>Озвучивание: </strong><span>{{:scoring}}</span></li>
+                <li><strong>Перевод: </strong><span>{{:translators}}</span></li>
+            </ul>
+            <strong>Описание: </strong>
+            <div class="description">
+                {{:description}}
+            </div>
+            <div class="newsfoot">
+                <a href="#" class="button"><span>Смотреть</span></a>
+                <span class="edit control"  title="Редактировать"></span>
+                <span class="delete control" title="Удалить"></span>
+            </div>
+        </section>
+        {{/for}}
+    </script>
+    <script type="text/template" data-name="add-post">
+    <form action="" method="post" class = "add-post" data-id="">
+        <section class="to-right">
+            <label>Введите название аниме:<br/>
+            <input type="text" name="title" class="rf"></label><br/>
+            <label>Автор:<br/>
+            <input type="text" name="author" class="rf"></label><br/>
+            <label>Введите адрес файла:<br/>
+            <input type="text" name="poster_scr" value="img/posters/" class="rf"></label><br/>
+
+            <label>Количество серий:<br/>
+            <input type="text" name="number" class="rf"></label><br/>
+            <label>Дата выпуска:<br/>
+            <input type="text" name="release" class="rf"></label><br/>
+            <label>Режжисер:<br/>
+            <input type="text" name="producer" class="rf"></label><br/>
+            <label>Автор оригинала:<br/>
+            <input type="text" name="original_author" class="rf"></label><br/>
+            <label>Перевод:<br/>
+            <input type="text" name="translators" class="rf"></label>
+        </section>
+        <section class="to-right">
+            <label>Выберите год выпуска:<br/>
+            <select name="year" multiple class="rs">
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+                <option>2007</option>
+                <option>2006</option>
+            </select>
+            </label><br/>
+            <label>Выберите жанр:<br/>
+                <select name="genre" multiple class="rs">
+                    <option>боевик</option>
+                    <option>боевые искусства</option>
+                    <option>драма</option>
+                    <option>комедия</option>
+                    <option>мистика</option>
+                    <option>повседневность</option>
+                    <option>приключения</option>
+                    <option>романтика</option>
+                    <option>сверхъестественное</option>
+                    <option>сёнэн</option>
+                    <option>фантастика</option>
+                    <option>фэнтези</option>
+                    <option>школа</option>
+                    <option>этти</option>
+                </select>
+            </label><br/>
+            <label>Выберите страну:<br/>
+                <select name="country" class="rf">
+                    <option>Япония</option>
+                    <option>Китай</option>
+                    <option>Украина</option>
+                </select>
+            </label>
+            <label>Выберите категорию:<br/>
+                <select name="category">
+                    <option>TV</option>
+                    <option>OVA</option>
+                    <option>Фильмы</option>
+                </select>
+            </label>
+            <label>Ongoing?<br/>
+                <select name="ongoing">
+                    <option>true</option>
+                    <option>false</option>
+                </select>
+            </label>
+        </section>
+        <section class="to-right">
+            <label>Озвучивание:<br/>
+                <select name="scoring" multiple class="rs">
+                    <option>9й Неизвестный</option>
+                    <option>Гамлетка Цезаревна</option>
+                    <option>Cuba77</option>
+                    <option>Oriko</option>
+                    <option>JAM</option>
+                    <option>Shina</option>
+                    <option>FruKt</option>
+                    <option>Jade</option>
+                    <option>Nika Lenina</option>
+                    <option>Ancord</option>
+                    <option>Студийная Банда AD</option>
+                    <option>Давид Петросян</option>
+                    <option>Торгиль</option>
+                    <option>Trina_D</option>
+                    <option>BalFor</option>
+                    <option>Sadzurami</option>
+                    <option>Lonely Dragon</option>
+                    <option>Wolfys</option>
+                    <option>Shina</option>
+                    <option>eina</option>
+                </select>
+            </label><br/>
+            <textarea name="description" rows="10" columns="20" class="rf"></textarea><br/>
+            <button type="submit" class="save">Сохранить</button>
+        </section>
+    </form>
+    </script>
+    <script type="text/template" data-name="gallery">
+    {{for gallery}}
+        {{if id == 'add'}}
+            <figure class="wallpapers add control">
+            <img src="{{:src}}" alt="button" >
+            </figure>
+        {{else}}
+            <figure class="wallpapers" data-position="{{:id}}">
+                <img src="{{:src}}" alt="image" title="category: {{:category}}">
+                <div class="rating">
+                    <span class="up"></span>
+                    {{:rating}}
+                    <span class="down"></span>
+                </div>
+                <span class="delete control" title="Удалить"></span>
+            </figure>
+        {{/if}}
+    {{/for}}
+    </script>
+    <script type="text/template" data-name="add-picture">
+        <form action="" method="post" class = "add-picture">
+            <label>Введите адрес файла:<br/>
+            <input type="text" value="img/gallery/" required></label><br/>
+            <label>Выберите категорию:<br/>
+                <select>
+                    <option>all</option>
+                    <option>Bakemonogatari</option>
+                    <option>Code Geass</option>
+                    <option>One Piece</option>
+                    <option>Naruto</option>
+                    <option>No Game No Life</option>
+                    <option>Ore no Imouto ga Konna ni Kawaii Wake ga Nai</option>
+                    <option>Neon Genesis Evangelion</option>
+                    <option>Soul Eater</option>
+                    <option>Sword Art Online</option>
+                    <option>The Melancholy of Haruhi Suzumiya</option>
+                    <option>Tokyo Ghoul</option>
+                    <option>To Aru Majutsu no Index</option>
+                    <option>To Love-Ru</option>
+                    <option>WarCraft</option>
+                </select>
+            </label><br/>
+            <button type="submit" class="save">Сохранить</button>
+        </form>
+    </script>
+
+    <script type="text/template" data-name="contacts">
+        <p class="head">О AnimeLib</p>
+        <p class="more">
+            Аниме – японская анимация, завоевавшая миллионы поклонников по всему миру. На нашем сайте вы можете смотреть бесплатное аниме онлайн. Специально для вас мы собрали фильмы различных жанров и разного хронометража. Смотрите бесплатное аниме онлайн и получайте удовольствие от просмотра!
+        </p>
+        <p class="head">Особенности аниме</p>
+        <p class="more">
+            Главное отличие аниме от обычных мультфильмов заключается в том, что предназначен этот жанр в основном для просмотра взрослыми и подростками. Смотреть аниме любят в странах Азии, Европы, Америки и других континентов. Одна из особенностей аниме заключается в характерной манере отрисовки персонажей и фонов. Герои аниме легко узнаваемы, фильмы этого жанра не спутать ни с какими другими мультипликационными произведениями.
+        </p>
+        <p class="more">
+            Те, кто любит смотреть аниме, знают, что оно издается как в форме отдельных фильмов, так и целыми телесериалами. Сюжеты могут описывать историю одного или нескольких десятков персонажей, эпохи, жанры и стили также отличаются разнообразием. Чаще всего источниками сюжета аниме являются японские комиксы манга, ранобэ или компьютерные игры. Существует и оригинальное аниме, ставшее источником для создания книжных и иллюстрированных версий.
+        </p>
+        <section class="contact-info">
+            <h3 class="head">Телефон офиса:</h3>
+            <p class="more">
+                +3(0472)54-07-48
+            </p>
+            <h3 class="head">Адрес:</h3>
+            <p class="more">
+                ул.Смелянская, 126, Черкассы
+            </p>
+            <h3 class="head">Почта:</h3>
+            <a href="mailto:us@example.org" class="email">us@example.org</a>
+        </section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.5100457283115!2d32.032185015282295!3d49.418170569082804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14bf46ef389af%3A0xdf9d19272c400f27!2z0LLRg9C7LiDQodC80ZbQu9GP0L3RgdGM0LrQsCwgMTI2LCDQp9C10YDQutCw0YHQuCwg0KfQtdGA0LrQsNGB0YzQutCwINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1452365893881" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Anime<span>lib</span></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#anime" id="anime" class="posts">Аниме</a>
+                    <ul class="submenu category">
+                        <li data-name="TV"><span>Аниме TV</span></li>
+                        <li data-name="Фильмы"><span>Аниме Фильмы</span></li>
+                        <li data-name="OVA"><span>Аниме OVA</span></li>
+                    </ul>
+                </li>
+                <li><a href="#gallery" class="gallery" id="gallery">Галерея</a></li>
+                <li><a href="#contacts" class="contacts" id="contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="slider">
+        <ul class="wrapper slides">
+            <li class="active">
+                <a href=""><img src="img/image-33.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="img/image-22.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="img/image-11.png" alt=""></a>
+            </li>
+        </ul>
+        <section class="controls">
+            <span class="button left-arrow">&lt;</span>
+            <span class="button right-arrow">&gt;</span>
+            <p>Самые популярные Аниме Ongoing</p>
+            <span class="button start"><span>Смотреть</span></span>
+        </section>
+    </section>
+    <section class="main">
+        <section class="right">
+            <form action="#">
+            <input type="text" placeholder = "Поиск аниме...">
+            <div class="button"><span>Поиск</span></div>
+        </form>
+        <section class="navigation">
+            <p class="title">Каталог аниме</p>
+            <ul class="menu">
+                <li>
+                    <span>Аниме по жанрам</span>
+                    <ul class="submenu" data-name="genre">
+                        <li><span>Комедия</span></li>
+                        <li><span>Мистика</span></li>
+                        <li><span>Романтика</span></li>
+                        <li><span>Фантастика</span></li>
+                        <li><span>Драма</span></li>
+                        <li><span>Приключения</span></li>
+                        <li><span>Фэнтези</span></li>
+                        <li><span>Боевик</span></li>
+                        <li><span>Повседневность</span></li>
+                        <li><span>Боевые искусства</span></li>
+                        <li><span>Сёнэн</span></li>
+                        <li><span>Сверхъестественное</span></li>
+                        <li><span>Школа</span></li>
+                        <li><span>Этти</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Аниме по даберам</span>
+                    <ul class="submenu" data-name="scoring">
+                        <li><span>9й Неизвестный</span></li>
+                        <li><span>Гамлетка Цезаревна</span></li>
+                        <li><span>Cuba77</span></li>
+                        <li><span>Oriko</span></li>
+                        <li><span>JAM</span></li>
+                        <li><span>Shina</span></li>
+                        <li><span>FruKt</span></li>
+                        <li><span>Jade</span></li>
+                        <li><span>Nika Lenina</span></li>
+                        <li><span>Ancord</span></li>
+                        <li><span>Студийная Банда AD</span></li>
+                        <li><span>Давид Петросян</span></li>
+                        <li><span>Торгиль</span></li>
+                        <li><span>Trina_D</span></li>
+                        <li><span>BalFor</span></li>
+                        <li><span>Sadzurami</span></li>
+                        <li><span>Lonely Dragon</span></li>
+                        <li><span>Wolfys</span></li>
+                        <li><span>Shina</span></li>
+                        <li><span>Reina</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Аниме по годам</span>
+                    <ul class="submenu" data-name="year">
+                        <li><span>2015</span></li>
+                        <li><span>2014</span></li>
+                        <li><span>2013</span></li>
+                        <li><span>2012</span></li>
+                        <li><span>2011</span></li>
+                        <li><span>2010</span></li>
+                        <li><span>2009</span></li>
+                        <li><span>2008</span></li>
+                        <li><span>2007</span></li>
+                        <li><span>2006</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="navigation">
+            <p class="title">Каталог аниме</p>
+            <ul class="menu">
+                <li>
+                    <span>Категории аниме</span>
+                    <ul class="submenu" data-name="category">
+                        <li><span>WarCraft</span></li>
+                        <li><span>Soul Eater</span></li>
+                        <li><span>To Love-Ru</span></li>
+                        <li><span>To Aru Majutsu no Index</span></li>
+                        <li><span>Ore no Imouto ga Konna ni Kawaii Wake ga Nai</span></li>
+                        <li><span>Naruto</span></li>
+                        <li><span>Code Geass</span></li>
+                        <li><span>Neon Genesis Evangelion</span></li>
+                        <li><span>One Piece</span></li>
+                        <li><span>The Melancholy of Haruhi Suzumiya</span></li>
+                        <li><span>Tokyo Ghoul</span></li>
+                        <li><span>Bakemonogatari</span></li>
+                        <li><span>No Game No Life</span></li>
+                        <li><span>Sword Art Online</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <span class="rating straight" title="Сортировать по убыванию">Сортировать по рейтингу</span>
+        </section>
+        </section>
+        <section class="content">
+            <div class="new control"  title="Добавить"></div>
+            <div class="speedbar">
+                <span>
+                    <span data-name="anime">Аниме Онлайн</span>
+                </span>
+            </div>
+            <div class="navi">
+            </div>
+            <div class="navibut">
+                <span class="prev">«</span>
+                <span class="next">»</span>
+            </div>
+            <section class="content-2">
+
+            </section>
+            <div class="navi">
+            </div>
+            <div class="navibut">
+                <span class="prev">«</span>
+                <span class="next">»</span>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <p>
+            Внимание сайт содержит материалы для взрослых. Все материалы на этом сайте продублированы из источников свободного распространения и предназначено только для домашнего ознакомления. Все права на представленные материалы принадлежат их авторам. Администрация сайта не несёт ответственности за представленный материал и его любое использование. Если какой-нибудь из представленных материалов нарушает ваши авторские права, то просим вас незамедлительно связаться с нами и мы удалим этот материал с ресурса!
+        </p>
+        <span class="up"></span>
+    </footer>
+
+    <script src="js/jsrender.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Brunswick</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="personal">
+		<div class="wrapper">
+			<ul class="per-nav">
+				<span>Меню</span>
+				<li><a href="#">Спецпредложения</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<a href="#" class="per-link button-yellow">Личный кабинет</a>
+		</div>
+	</div>
+	<header>
+		<div class="header-top">
+			<div class="wrapper">
+				<a href="#" class="logo"></a>
+				<div class="header-contacts">
+					<a href="tel:74956601344" class="header-tel">+ 7 (495) 660-13-44</a>
+					<a href="mailto:zakaz@brunswick.ru" class="header-mail">zakaz@brunswick.ru</a>
+				</div>
+				<a href="#" class="basket">
+					<span class="head">Моя корзина</span>
+					<span class="details">8 товаров на 162 371 руб.</span>
+				</a>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="wrapper">
+				<ul class="header-nav">
+					<li><a href="#">Расходные материалы</a></li>
+					<li><a href="#">Химия</a></li>
+					<li><a href="#">Запасные части</a></li>
+				</ul>
+				<form action="#">
+					<span class="placeholder">Введите номер детали, например, <i>3453274253</i></span>
+					<input type="text" id="search">
+					<input type="submit" value="Поиск" class="button-blue">
+				</form>
+			</div>
+		</div>
+		<div class="addition-menu catalog">
+			<div class="wrapper">
+				<h1 class="head">Каталог товаров</h1>
+				<ul class="per-nav">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Корзина</a></li>
+					<li><a href="#" class="active">Оформление заказа</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section class="wrapper">
+		<div class="sidebar">
+			<h3 class="menu-cogwheel">Запасные части</h3>
+			<ul>
+				<li><a href="#">Пинсеттеры GS</a></li>
+				<li><a href="#">Оборудование для боулинга</a></li>
+				<li><a href="#">Запасные части на натирочную машину Phoenix-Lite</a></li>
+				<li><a href="#">Счетная система Vector</a></li>
+				<li><a href="#">Машина по уходу за дорожками Authority 22</a></li>
+				<li><a href="#">Машина по уходу за дорожками Envoy</a></li>
+			</ul>
+			<h3 class="menu-chemistry">Химия</h3>
+			<ul>
+				<li><a href="#">Пинсеттеры GS</a></li>
+				<li><a href="#">Оборудование для боулинга</a></li>
+				<li><a href="#">Запасные части на натирочную машину Phoenix-Lite</a></li>
+				<li><a href="#">Счетная система Vector</a></li>
+				<li><a href="#">Машина по уходу за дорожками Authority 22</a></li>
+				<li><a href="#">Машина по уходу за дорожками Envoy</a></li>
+			</ul>
+			<h3 class="menu-material">Расходные материалы</h3>
+			<ul>
+				<li><a href="#">Пинсеттеры GS</a></li>
+				<li><a href="#">Оборудование для боулинга</a></li>
+				<li><a href="#">Запасные части на натирочную машину Phoenix-Lite</a></li>
+				<li><a href="#">Счетная система Vector</a></li>
+				<li><a href="#">Машина по уходу за дорожками Authority 22</a></li>
+				<li><a href="#">Машина по уходу за дорожками Envoy</a></li>
+			</ul>
+		</div>
+		<div class="order-make">
+			<h1 class="head">Оформление заказа</h1>
+			<div class="form">
+				<form action="#">
+					<div class="form-field person">
+						<h3>Выберите тип плательщика*</h3>
+						<input id="ur" type="radio" name="type">
+						<label for="ur">Юридическое лицо</label>
+						<input id="fis" type="radio" name="type">
+						<label for="fis">Физическое лицо</label>
+					</div>
+					<p class="form-field star"><input type="text" placeholder="Город:" required></p>
+					<p class="form-field"><input type="text" placeholder="Индекс:"></p>
+					<p class="form-field star"><input type="text" placeholder="Телефон:" required></p>
+					<p class="form-field star"><input type="text" placeholder="Адрес доставки:" required></p>
+					<p class="form-field star"><input type="text" placeholder="Контактное лицо:" required></p>
+					<div class="form-field delivery">
+						<h2>Способы доставки:</h2>
+						<input id="one" type="radio" name="company">
+						<label for="one">
+							<h3>Транспортная компания 1</h3>
+							<p>
+								По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых клиентов недоумение при попытках прочитать рыбу текст.
+							</p>
+						</label>
+						<input id="two" type="radio" name="company">
+						<label for="two">
+							<h3>Транспортная компания 2</h3>
+							<p>
+								По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых клиентов недоумение при попытках прочитать рыбу текст.
+							</p>
+						</label>
+					</div>
+					<div class="form-field pay">
+						<h3>Способы оплаты:</h3>
+						<input id="el" type="radio" name="pay">
+						<label for="el"><span>Счет</span></label>
+						<input id="cash" type="radio" name="pay">
+						<label for="cash"><span>Наличный расчет (в оффисе компании)</span></label>
+					</div>
+					<h3>Товары в заказе:</h3>
+					<ul>
+						<li class="head">
+							<div class="code">
+								<div class="id">№</div>
+								<div class="image"></div>
+								<div class="value">Артикул</div>
+							</div>
+							<div class="name">Название</div>
+							<div class="info">
+								<div class="price">Цена</div>
+								<div class="availability"></div>
+							</div>
+							<div class="last">
+								<div class="number">Кол-во</div>
+								<div class="sum">Сумма (руб)</div>
+								<div class="basket"></div>
+							</div>
+						</li>
+						<li>
+							<div class="code">
+								<div class="id"><span class="mobile">№</span>1</div>
+								<div class="image">
+									<img src="img/catalog-image.jpg" alt="catalog-image">
+								</div>
+								<div class="value"><span class="mobile">Артикул</span>47011053004</div>
+							</div>
+							<div class="name">Flat Washer (8.4 mm x 25 mm x 2 mm)</div>
+							<div class="info">
+								<div class="price"><span class="mobile">Цена</span>317руб.</div>
+								<div class="availability"><span class="mobile">Наличие</span>есть</div>
+							</div>
+							<div class="last">
+								<div class="number">
+									<a href="#" class="plus">+</a>
+									<input type="text" value="1шт">
+									<a href="#" class="minus">-</a>
+								</div>
+								<div class="sum">317руб</div>
+								<div class="basket"></div>
+							</div>
+						</li>
+						<li>
+							<div class="code">
+								<div class="id"><span class="mobile">№</span>2</div>
+								<div class="image">
+									<img src="img/catalog-image.jpg" alt="catalog-image">
+								</div>
+								<div class="value"><span class="mobile">Артикул</span>11051772001</div>
+							</div>
+							<div class="name">Deflection Chain Gear with Bearing Complete</div>
+							<div class="info">
+								<div class="price"><span class="mobile">Цена</span>200руб.</div>
+								<div class="availability"><span class="mobile">Наличие</span>есть</div>
+							</div>
+							<div class="last">
+								<div class="number">
+									<a href="#" class="plus">+</a>
+									<input type="text" value="1шт">
+									<a href="#" class="minus">-</a>
+								</div>
+								<div class="sum">200руб</div>
+								<div class="basket"></div>
+							</div>
+						</li>
+					</ul>
+					<p class="form-field">
+						<textarea cols="30" rows="10" placeholder="Комментарии к заказу:"></textarea>
+					</p>
+					<span class="add">
+						*Поля, обязательные для заполнения
+					</span>
+				</form>
+				<a href="#" class="button-yellow">Оформить заказ</a>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="wrapper">
+			<ul class="footer-nav">
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Спецпредложения</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="footer-bottom">
+				<a href="#" class="logo"></a>
+				<div class="footer-contacts">
+					<a href="tel:74956601344" class="footer-tel">+ 7 (495) 660-13-44</a>
+					<a href="mailto:zakaz@brunswick.ru" class="footer-mail">zakaz@brunswick.ru</a>
+				</div>
+				<form action="#">
+					<h3>Подписка на новости</h3>
+					<input type="text" placeholder="E-mail">
+					<input type="submit" value="Подписаться" class="button-blue">
+					<a href="https://www.facebook.com/ProBrunswick" class="facebook"></a>
+				</form>
+			</div>
+		</div>
+		<div class="copy">
+			<div class="wrapper">
+				<span>&copy;  Все права защищены. Информация сайта защищена законом об авторских правах.</span>
+				<a href="#" class="smarto">
+					<span>разработка дизайна сайта</span>
+					<span class="logo"></span>
+				</a>
+			</div>
+		</div>
+	</footer>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

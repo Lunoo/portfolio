@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COMFORT4U</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style-for-IE.css">
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<a href="#" class="logo">COMFORT<span>4</span>U</a>
+			<select class="language">
+				<option>Русский</option>
+  				<option>Украинский</option>
+			</select>
+			<a href="tel:+380933722110" class="tel">+3 8 (093) 37-22-110</a>
+			<div class="social">
+				<span class="vk hvr-rotate"></span>
+				<span class="youtube hvr-rotate"></span>
+				<span class="fb hvr-rotate"></span>
+				<span class="google hvr-rotate"></span>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<nav class="navigation top clearfix">
+			<div class="wrapper">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Проекты</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="social">
+					<span class="vk hvr-rotate"></span>
+					<span class="youtube hvr-rotate"></span>
+					<span class="fb hvr-rotate"></span>
+					<span class="google hvr-rotate"></span>
+				</div>
+			</div>
+		</nav>
+		<div class="supporting">
+			<div class="wrapper">
+				<input type="text" class="search" placeholder="Поиск">
+				<span class="delete">Удалить фильтры</span>
+				<span class="info">Показано 1-10 всего 237</span>
+				<select class="sort">
+					<option>Цена за убыванием</option>
+					<option>Цена за возрастанием</option>
+				</select>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="filter">
+				<h2>Фильтр</h2>
+				<div class="filter-block country">
+					<h3 class="title">Страны</h3>
+					<ul>
+						<li><a href="#">Испания (32)</a></li>
+						<li><a href="#">Германия (45)</a></li>
+						<li><a href="#">Чили (27)</a></li>
+						<li><a href="#">США (40)</a></li>
+						<li><a href="#">Турция (11)</a></li>
+					</ul>
+					<button>Все страны</button>
+				</div>
+				<div class="filter-block type">
+					<h3 class="title">Страны</h3>
+					<ul>
+						<li><a href="#">Квартира (117)</a></li>
+						<li><a href="#">Дом (231)</a></li>
+						<li><a href="#">Участок (341)</a></li>
+					</ul>
+				</div>
+				<div class="filter-block filters">
+					<h3 class="title">Фильтры</h3>
+					<ul>
+						<li>
+							<h3>Цена (EUR)</h3>
+							<input type="text" value="0" class="min num">
+							<input type="text" value="76500000" class="max num">
+							<div id="range-0"></div>
+						</li>
+						<li>
+							<h3>Комнаты</h3>
+							<input type="text" value="0" class="min num">
+							<input type="text" value="207" class="max num">
+							<div id="range-1"></div>
+						</li>
+						<li>
+							<h3>Спальные</h3>
+							<input type="text" value="0" class="min num">
+							<input type="text" value="72" class="max num">
+							<div id="range-3"></div>
+						</li>
+						<li>
+							<h3>Ванные</h3>
+							<input type="text" value="0" class="min num">
+							<input type="text" value="55" class="max num">
+							<div id="range-4"></div>
+						</li>
+						<li>
+							<h3>Площадь м<sup>2</sup></h3>
+							<input type="text" value="0" class="min num">
+							<input type="text" value="81000" class="max num">
+							<div id="range-5"></div>
+						</li>
+						<li>
+							<h3>Общая площадь м<sup>2</sup></h3>
+							<input type="text" value="0" class="min num">
+							<input type="text" value="1060000" class="max num">
+							<div id="range-6"></div>
+						</li>
+						<li>
+							<h3>Площадь участка м<sup>2</sup></h3>
+							<input type="text" value="0" class="min num">
+							<input type="text" value="3920000000" class="max num">
+							<div id="range-7"></div>
+						</li>
+					</ul>
+				</div>
+				<div class="filter-block buildings">
+					<h3 class="title">Постройки</h3>
+					<ul>
+						<li><a href="#">Балкон (117)</a></li>
+						<li><a href="#">Встроенная кухня (231)</a></li>
+						<li><a href="#">Система безопасности (341)</a></li>
+						<li><a href="#">Гараж (400)</a></li>
+						<li><a href="#">Сад (123)</a></li>
+						<li><a href="#">Подвал (451)</a></li>
+						<li><a href="#">Кондиционер (275)</a></li>
+						<li><a href="#">Море (177)</a></li>
+						<li><a href="#">Бассейн (311)</a></li>
+						<li><a href="#">Тераса (342)</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="agent">
+				<h3 class="title">Собственный агент</h3>
+				<p>
+					Не упустите дом Вашей мечты с нашим электронным сервисом
+					агент 24. Введите свой почтовый адрес и получайте сведения о самых выгодных предложениях прямо на почту!
+				</p>
+				<form action="#">
+					<input type="email" placeholder="E-MAIL" required>
+					<input type="submit">
+				</form>
+			</div>
+			<div class="list">
+				<div class="house">
+					<img src="img/catalog/house-1.jpg" alt="house-1">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-2.jpg" alt="house-2">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-3.jpg" alt="house-3">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-4.jpg" alt="house-4">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-5.jpg" alt="house-5">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-6.jpg" alt="house-6">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-7.jpg" alt="house-7">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-8.jpg" alt="house-8">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+				<div class="house">
+					<img src="img/catalog/house-9.jpg" alt="house-9">
+					<div class="details">
+						<h2 class="title">Резиденция Gwen Blen</h2>
+						<div class="tags">
+							<span>Дом</span>
+							<span>Купить</span>
+							<span>США</span>
+							<span>Вашингтон</span>
+							<span>Бассейн</span>
+						</div>
+						<ul>
+							<li><strong>Общая площадь: </strong>334 М<sup>2</sup></li>
+							<li><strong>Спальни: </strong>4</li>
+							<li><strong>Ванные: </strong>4</li>
+							<li><strong>E&V ID: </strong>EVHK17764</li>
+						</ul>
+						<span class="price">750,000,000$</span>
+						<a href="#" class="more">Узнать детали</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pagination">
+			<div class="wrapper">
+				<div class="show">
+					<span class="title">Показывать на странице</span>
+					<i class="num">10</i>
+					<i class="num">20</i>
+					<i class="num">30</i>
+					<i class="num">40</i>
+					<i class="num">50</i>
+				</div>
+				<div class="pages">
+					<span class="active">1</span>
+					<span>2</span>
+					<span>3</span>
+					<span>4</span>
+					<span>5</span>
+					<span class="dot">...</span>
+					<span>234</span>
+				</div>
+				<span class="up">Вверх</span>
+			</div>
+		</div>
+		<nav class="wrapper navigation">
+			<div class="wrapper">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Проекты</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="slogan">
+				<span>разработка дизайна сайта</span>
+				<a href="#" class="logo"></a>
+			</div>
+			<div class="social">
+				<span class="vk hvr-rotate"></span>
+				<span class="youtube hvr-rotate"></span>
+				<span class="fb hvr-rotate"></span>
+				<span class="google hvr-rotate"></span>
+			</div>
+		</div>
+		<div class="copy">
+			<span>&copy; 2016 comfort4u</span>
+		</div>
+	</footer>
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery-ui.js"></script>
+</body>
+</html>

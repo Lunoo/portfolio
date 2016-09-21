@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Checkout</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="top-menu">
+			<div class="wrapper">
+				<ul class="navigation">
+					<li><a href="#">Про нас</a></li>
+					<li><a href="#">Як намалювати</a></li>
+					<li><a href="#">На замовлення</a></li>
+					<li><a href="#">Співпраця</a></li>
+					<li><a href="#">Як замовити</a></li>
+					<li><a href="#">Послуги оформлення</a></li>
+					<li><a href="#">Відгуки</a></li>
+					<li><a href="#" class="active">Акція</a></li>
+					<li><a href="#">Контакти</a></li>
+				</ul>
+				<span class="tel">+38 (044) 232-87-56</span>
+				<a href="#" class="in">Авторизацiя / Iм’я</a>
+			</div>
+		</div>
+		<div class="bottom-menu">
+			<div class="wrapper">
+				<div class="language mobile ru">
+					<span class="ru">RU</span>
+					<span class="ua">UA</span>
+				</div>
+				<label class="search">
+					<input type="text" placeholder="Що шукаете?">
+				</label>
+				<a href="#" class="logo"></a>
+				<div class="wrap">
+					<div class="basket">
+						<i>2</i>
+						<span>UAH 0.00</span>
+					</div>
+					<span class="like"><i>5</i></span>
+					<div class="language ru">
+						<span class="active"></span>
+						<span class="ru">RU</span>
+						<span class="ua">UA</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="categories">
+			<span></span>
+			<ul>
+				<li><a href="#">Наклейки на холодильник </a></li>
+				<li><a href="#">Новий Рiк 2016</a></li>
+				<li><a href="#">Оригiнальнi</a></li>
+				<li><a href="#">Популярне</a></li>
+				<li><a href="#">Подорожi</a></li>
+				<li><a href="#">Композицii</a></li>
+				<li><a href="#">Котоманiя</a></li>
+				<li><a href="#">Тварини</a></li>
+				<li><a href="#">Новинки</a></li>
+				<li><a href="#">Дитячi</a></li>
+				<li><a href="#">Кохання</a></li>
+				<li><a href="#">Мiста</a></li>
+				<li><a href="#">Рiзне</a></li>
+				<li><a href="#">Флора</a></li>
+				<li><a href="#">Кухня</a></li>
+				<li><a href="#">Спорт</a></li>
+				<li><a href="#">Люди</a></li>
+				<li><a href="#">Текст</a></li>
+				<li><a href="#" class="last">Все</a></li>
+				<li><a href="#" class="last">Знижка!</a></li>
+			</ul>
+		</div>
+		<section class="checkout">
+			<div class="wrapper">
+				<div class="breadcrumbs">
+					<a href="#">Головна</a><a href="#">Мій кабінет</a><a href="#">Мої замовлення</a>
+				</div>
+				<div class="formalization">
+					<h2 class="title">Оформлення замовлення</h2>
+					<span class="delete">&times;</span>
+					<table>
+						<thead>
+							<tr>
+								<td>Товари</td>
+								<td>Ціна</td>
+								<td>Кількість</td>
+								<td>Сума</td>
+							</tr>
+						</thead>
+						<tr>
+							<td>
+								<img src="img/feather.jpg" alt="feather">
+								<span class="exterminate">Видалити</span>
+								<div class="text">
+									<h4 class="head">Пір'я</h4>
+									<ul>
+										<li><span>Розмір: </span>Ш 65 см на В 80 см</li>
+										<li><span>Тип матеріалу: </span>матовий</li>
+										<li><span>Зображення: </span>звичайне</li>
+										<li><span>Колір наклейки: </span>чорний</li>
+									</ul>
+								</div>
+							</td>
+							<td>300.50грн</td>
+							<td>
+								<div class="number">
+									<input type="text" value="1">
+									<a href="#" class="arrow-up"></a>
+									<a href="#" class="arrow-down"></a>
+								</div>
+								<span>шт.</span>
+							</td>
+							<td>300.50грн</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<h4 class="head">Разом:</h4>
+								1 товар на суму<br>
+								Вартiсть доставки
+							</td>
+							<td>
+								<span class="padding">
+									300.50грн<br>
+									35грн
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								До сплати:
+							</td>
+							<td>
+								<span class="all">300.85грн</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="addition-info">
+					<h2 class="title">
+						Iнформацiя для оплати та доставки замовлення:
+					</h2>
+					<form action="#">
+						<div class="form-block">
+							<h3 class="block-head">Iнформацiя про покупця:</h3>
+							<label>ПІБ <input type="text" placeholder="ПІБ"></label>
+							<label>Email <input type="text" placeholder="Email"></label>
+							<label>Телефон <input type="text" placeholder="Телефон"></label>
+							<label class="city">Місто <span>Україна</span><br><input type="text" value="м Київ"></label>
+							<label>Адреса доставки <input type="text" placeholder="Адреса доставки"></label>
+							<label>Номер складу<br>Нової Пошти <input type="text" placeholder="Номер складу Нової Пошти"></label>
+						</div>
+						<div class="form-block payment-system">
+							<h3 class="block-head">Платіжна система</h3>
+							<label>
+								<input type="radio" name="system">
+								<p>
+									Гоплата готівкою (у відділенні Нової Пошти або кур'єру)	
+								</p>
+							</label>
+							<label>
+								<input type="radio" name="system">
+								<p>
+									Гоплата в терміналі «Приват Банку» (номер картки надішлемо після затвердження замовлення)
+								</p>
+							</label>
+							<label class="mastercard">
+								<input type="radio" name="system">
+								<p>
+									оплата банківською картою через систему Liqpay
+								</p>
+								<span class="visa"></span><span class="mastercard"></span>
+							</label>
+							<label class="privat">
+								<input type="radio" name="system"><span class="privat">
+							</label>
+						</div>
+						<div class="form-block delivery-service">
+							<h3 class="block-head">Служба доставки</h3>
+							<label>
+								<input type="radio" name="service">
+								<p>
+									Доставка по Києву: UAH 50.00 грн.
+								</p>
+							</label>
+							<label>
+								<input type="radio" name="service">
+								<p>
+									Самовивіз м. Київ вул. Бережанська 9: UAH 0.00 грн.
+								</p>
+							</label>
+							<label>
+								<input type="radio" name="service">
+								<span class="new-mail"></span>
+								<a href="#">Розрахувати вартість</a>
+							</label>
+							<p>
+								Доставка до відділення Нової пошти (згідно з тарифами перевізника): UAH 0.00 грн.
+							</p>
+							<label>
+								<input type="radio" name="service">
+								<span class="new-mail"></span>
+								<a href="#">Розрахувати вартість</a>
+							</label>
+							<p>
+								Доставка до відділення Нової пошти (згідно з тарифами перевізника): UAH 0.00 грн.
+							</p>
+						</div>
+						<p class="total">
+							До сплати: <span class="all">300.85грн</span>
+						</p>
+						<h3 class="block-head last">Коментар до замовлення</h3>
+						<textarea cols="30" rows="10"></textarea>
+						<input type="submit" value="оформити замовлення" class="more dark popup">
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="wrapper">
+			<div class="advantages">
+				<h3>Чим ми кращi?</h3>
+				<ul>
+					<li>У нас власне виробництво.</li>
+					<li>Краще співвідношення ціна - якість.</li>
+					<li>Ми робимо наклейки швидше, протягом дня.</li>
+					<li>Ми цінуємо кожного клієнта.</li>
+					<li>Краще співвідношення ціна - якість.</li>
+					<li>Ми робимо наклейки швидше, протягом дня.</li>
+					<li>Ми цінуємо кожного клієнта.</li>
+				</ul>
+			</div>
+			<div class="new">
+				<h3>Що нового?</h3>
+				<div class="post">
+					<span class="date">27.09.2016</span>
+					<p>
+						При замовленні на суму більше 700 грн. ми даруємо Вам наклейку "Божевільна корова"...
+					</p>
+				</div>
+				<div class="post">
+					<span class="date">27.09.2016</span>
+					<p>
+						При замовленні на суму більше 700 грн. ми даруємо Вам наклейку "Божевільна корова"...
+					</p>
+				</div>
+				<div class="post">
+					<span class="date">27.09.2016</span>
+					<p>
+						При замовленні на суму більше 700 грн. ми даруємо Вам наклейку "Божевільна корова"...
+					</p>
+				</div>
+				<div class="post">
+					<span class="date">27.09.2016</span>
+					<p>
+						При замовленні на суму більше 700 грн. ми даруємо Вам наклейку "Божевільна корова"...
+					</p>
+				</div>
+			</div>
+			<div class="contacts">
+				<h3>Як з нами зв'язатися?</h3>
+				<ul>
+					<li class="adress">м. Київ вул. Бережанська 9</li>
+					<li class="mail"><a href="mailto:info@chatte.com.ua">info@chatte.com.ua</a></li>
+					<li class="skype">alpbets </li>
+					<li clall="tel">+38 (044) 232-87-56</li>
+					<li class="time">пн-пт с 10 до 19</li>
+				</ul>
+				<div class="social-footer">
+					<span class="fb"></span>
+					<span class="vk"></span>
+					<span class="mates"></span>
+					<span class="youtube"></span>
+					<span class="google"></span>
+					<span class="photos"></span>
+				</div>
+			</div>
+		</div>
+		<div class="footer">Chatte 2016 &copy; Copyright <span>All Rights Reserved</span></div>
+	</footer>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/colorpicker.js"></script>
+    <script type="text/javascript" src="js/eye.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/layout.js?ver=1.0.2"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery.easydropdown.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script>
+		(function($){
+			$(window).load(function(){
+				
+				$(".scroll").mCustomScrollbar({
+					scrollButtons:{enable:true,scrollType:"stepped"},
+					keyboard:{scrollType:"stepped"},
+					mouseWheel:{scrollAmount:120},
+					axis:"x",
+					theme:"rounded-dark",
+					autoExpandScrollbar:true,
+					snapAmount:88,
+					snapOffset:65,
+					advanced:{autoExpandHorizontalScroll:true}
+				});	
+			});
+		})(jQuery);
+		(function($){
+			$(window).load(function(){
+				
+				$(".popup").colorbox({
+					inline:true, 
+					width:"1120px",
+					maxHeight:"98%"
+				});
+				
+				$("#cboxLoadedContent").mCustomScrollbar({
+					live:true,
+					theme:"inset-dark"
+				});
+				
+			});
+		})(jQuery); 
+	</script>
+</body>
+</html>

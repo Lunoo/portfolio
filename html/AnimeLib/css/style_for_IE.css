@@ -1,0 +1,96 @@
+body{
+    min-width: 1055px;
+}
+.navigation{
+    border-radius: 10px;
+    position: relative;
+    behavior: url(PIE-1.0.0/PIE.htc);
+}
+
+.navigation span{
+    position: relative;
+    border-radius: 10px;
+    behavior: url(PIE-1.0.0/PIE.htc);
+}
+
+.navi span,
+.navibut span{
+    border-radius: 5px;
+    position: relative;
+    behavior: url(PIE-1.0.0/PIE.htc);
+}
+
+.newsinfo{
+    border-radius: 5px;
+    position: relative;
+    behavior: url(PIE-1.0.0/PIE.htc);
+}
+
+.content-2 .wallpapers{
+    border-radius: 10px;
+    position: relative;
+    behavior: url(PIE-1.0.0/PIE.htc);
+}
+
+.save{
+    border-radius: 10px;
+    position: relative;
+    behavior: url(PIE-1.0.0/PIE.htc);
+}
+
+.button{
+    background: #3d7786;
+}
+.button:hover{
+    background: #21596a;
+}
+.start{
+    background: #863d3d;
+}
+.start:hover{
+    background: #6a2121;
+}
+.save{
+    background: #cddadf;
+}
+.save:hover{
+    background: #4c6678;
+}
+
+.right{
+    margin-right: 40px;
+    padding-right: 0;
+}
+.content:after{
+    top: 0;
+    right: 0px;
+
+    display: block;
+    border: none;
+    width: 40px;
+    height: 1px;
+
+    content: '';
+
+    background: #4c6678;
+}
+.speedbar:after{
+    content: '';
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 20px solid #26333c;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+}
+.to-right{
+    margin: 0 38px;
+}
+.to-right:last-child{
+    margin-right: 0;
+}
+.content-2 .wallpapers{
+    margin: 10px 8px;
+}

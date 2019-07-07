@@ -1,0 +1,106 @@
+@import "../../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@import "variables";
+@import "material";
+
+body {
+	display: flex;
+	height: 100vh;
+	margin: 0;
+	background: linear-gradient(to right, $dark-blue, $light-blue, rgb(36, 36, 62));
+}
+
+todo-root {
+	display: block;
+	margin: auto;
+}
+
+.todo-list {
+	width: 500px;
+	max-width: 100%;
+}
+
+todo-item {
+	display: block;
+	background: white;
+	margin-bottom: 5px;
+	
+	&:first-child {
+		border-radius: 4px 4px 0 0;
+	}
+}
+
+button.todo-button {
+	width: 100%;
+	background: white;
+	border-radius: 0 0 4px 4px;
+}
+
+.todo-item {
+	position: relative;
+	padding: 5px 60px 0 30px;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.87);
+	cursor: move;
+	
+	&:hover .material-icons {
+		opacity: .5;
+	}
+}
+
+.todo-item-actions {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	
+	.mat-icon {
+		width: 18px;
+		height: 18px;
+		font-size: 18px;
+		opacity: 0;
+		transition: opacity 90ms $transition;
+		cursor: pointer;
+		z-index: 1;
+		
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.todo-checkbox {
+	padding: 16.41px 0 23.56px;
+	
+	.mat-checkbox-layout {
+		position: relative;
+		display: inline-block;
+		line-height: 1.125;
+	}
+	
+	.mat-checkbox-inner-container {
+		position: absolute;
+		left: -20px;
+		top: -1px;
+	}
+	
+	.mat-checkbox-label {
+		white-space: pre-wrap;
+		word-break: break-word;
+		line-height: 1.125;
+		opacity: 1;
+		
+		background-image: linear-gradient(currentColor, currentColor);
+		background-position: 0 60%;
+		background-repeat: no-repeat;
+		background-size: 0 2px;
+		transition: background-size 90ms $transition, opacity 90ms $transition;
+		
+		&:before {
+			display: none;
+		}
+	}
+	
+	.mat-checkbox-checked .mat-checkbox-label {
+		background-size: 100% 2px;
+		opacity: .5;
+	}
+}
